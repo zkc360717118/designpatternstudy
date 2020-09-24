@@ -1,4 +1,4 @@
-package proxy.V1;
+package proxy.静态代理;
 
 /**
  * 有个坦克类，你想在在方法执行中加上执行时间，执行日志，但是你无法直接使用这个方法（别人的接口）（不能改动原来的代码）
@@ -6,13 +6,7 @@ package proxy.V1;
  * 1.创建一个接口类Movable
  * 2.被代理的类 ，和各种代理类都实现同样的接口
  */
-public class Main {
-    public static void main(String[] args) {
-        TankTimeProxy tankTimeProxy = new TankTimeProxy(new Tank());
-        TankLogProxy tankLogProxy = new TankLogProxy(tankTimeProxy);
-        tankLogProxy.move();
-    }
-}
+
 
 interface Movable {
     void move();
@@ -48,7 +42,7 @@ class TankLogProxy implements Movable{
     }
 }
 
-class Tank implements Movable{
+public class Tank implements Movable{
     public Tank() {
     }
 
@@ -62,5 +56,11 @@ class Tank implements Movable{
         System.out.println("i am moving");
 //        long end = System.currentTimeMillis();
 //        System.out.println((end-start)/1000);
+    }
+
+    public static void main(String[] args) {
+        TankTimeProxy tankTimeProxy = new TankTimeProxy(new Tank());
+        TankLogProxy tankLogProxy = new TankLogProxy(tankTimeProxy);
+        tankLogProxy.move();
     }
 }
