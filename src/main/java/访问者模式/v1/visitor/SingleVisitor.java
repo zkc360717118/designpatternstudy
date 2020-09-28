@@ -1,4 +1,4 @@
-package 访问者模式.visitor;
+package 访问者模式.v1.visitor;
 
 import 访问者模式.city.Beijing;
 import 访问者模式.city.Shanghai;

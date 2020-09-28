@@ -1,9 +1,9 @@
 package iterator.v5;
 
-public interface Collection_ {
-    void add(Object o);
+public interface Collection_<T> {
+    void add(T o);
 
     int size();
 
-    Iterator_ iterator();
+    Iterator_<T> iterator();
 }

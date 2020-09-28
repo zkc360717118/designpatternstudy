@@ -1,9 +1,9 @@
 package iterator.v5;
 
-public interface Iterator_ {
+public interface Iterator_<E> {
     boolean hasNext();
 
-    Object next();
+    E next();
 
 
 }

@@ -1,4 +1,4 @@
-package 访问者模式;
+package 访问者模式.v1;
 
 import 访问者模式.city.TravelCities;
 import 访问者模式.visitor.SingleVisitor;
